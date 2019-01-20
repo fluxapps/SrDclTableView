@@ -1,0 +1,223 @@
+@bsbase: "../../../../../../../../libs/bower/bower_components/bootstrap/less/";
+
+// This part should be a copy of the less/bootstrap.less file
+// containing all imports needed.
+// The variables.less should point to a customized version.
+
+// Core variables and mixins
+@import "@{bsbase}variables.less";    // original
+
+
+
+.loop (0) {}
+.loop (@index) when (@index > 0) {
+  .pl-@{index} {
+	margin-left: @index * 0.5rem!important;
+	border-left:1px solid;
+	border-color: red;
+  }
+
+  .loop (@index - 1);
+
+  .bg-@{index} {
+	background-color: darken(#FFF,@index * 5%);
+  }
+}
+.loop(12);
+
+.start_point {
+  background-color: @brand-primary;
+}
+
+.end_point {
+  background-color: @brand-success;
+}
+
+h1.activity_title {
+  color: #369;
+}
+
+ul.treeview {
+  color: #369;
+}
+
+.il-panel-listing-std-container {
+  color: #333333;
+  margin-left: 30px;
+}
+
+.panel {
+  background-color: unset !important;
+}
+
+.panel-body {
+  width: 100% !important;
+}
+
+div.panel:first-child {
+  margin-top:20px;
+}
+
+div.treeview {
+  min-width: 100px;
+  min-height: 100px;
+
+  max-height: 256px;
+  overflow:auto;
+
+  padding: 4px;
+
+  margin-bottom: 20px;
+
+  color: #369;
+
+  border: solid 1px;
+  border-radius: 4px;
+}
+div.treeview ul:first-child:before {
+  display: none;
+}
+.treeview, .treeview ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  /*color: #369;*/
+}
+.treeview ul {
+  margin-left:1em;
+  position:relative
+}
+.treeview ul ul {
+  margin-left:.5em
+}
+
+ul.treeview {
+  margin-top: -0px;
+
+}
+
+#ilc_accordion_40_2 > div:nth-child(2) > div.il_VAccordionContentDef > div.ilc_va_icont_VAccordICont > div:nth-child(2) > div > div > ul {
+  margin-top: -0px !important;
+}
+
+ul.treeview > li > ul:before {
+  margin-top: -0px !important;
+}
+
+ul.treeview > li > ul:before {
+  margin-top: -0px !important;
+}
+
+
+.treeview ul:before {
+  content:"";
+  display:block;
+  width:0;
+  position:absolute;
+  top:0;
+  left:0;
+  border-left:1px solid;
+  margin-top: -392px;
+  margin-bottom: 372px;
+
+  /* creates a more theme-ready standard for the bootstrap themes */
+  bottom:15px;
+}
+.treeview li {
+  margin:0;
+  padding:0 0.18em;
+
+  position:relative
+}
+.treeview ul li:before {
+  content:"";
+  display:block;
+  width:10px;
+  height:0;
+  border-top:1px solid;
+  margin-top:-1px;
+  position:absolute;
+  top:1em;
+  left:0
+}
+.tree-indicator {
+  margin-right:5px;
+
+  cursor:pointer;
+}
+.treeview li a {
+  text-decoration: none;
+  color:inherit;
+
+  cursor:pointer;
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+  text-decoration: none;
+  color:inherit;
+  border:none;
+  background:transparent;
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+  outline: 0;
+}
+
+.il-panel-listing-std-container h4,
+.il-panel-listing-std-container h3 {
+  display: none !important;
+}
+
+.qm-box {
+  height: 400px;
+  background: @gray-lighter;
+}
+
+.qm-box {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-bottom: 5px #fff;
+
+  > .il-panel-listing-std-container {
+    margin: 0px !important;
+    padding: 0px !important;
+    background: @gray-lighter !important;
+
+  }
+
+  .il-item-description {
+    font-size: 14px !important;
+  }
+
+  .activity_title {
+    font-size: 16px !important;
+    padding-left: 20px;
+  }
+
+  .il-item {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    background: @gray-lighter !important;
+   // margin: 0px !important;
+  //  padding: 0px !important;
+  }
+
+
+}
+
+.treeview li {
+  padding-right: 0px;
+}
+
+
+.qm-panel {
+  padding-top:  15px;
+
+  h1{
+    padding-left: 20px;
+  }
+}
+
+ul.treeview {
+  padding-top: 10px;
+  padding-inline-start: 0px;
+}
